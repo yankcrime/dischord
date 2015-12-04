@@ -1,0 +1,9 @@
+---
+serf::node_name: "%{::hostname}"
+serf::encrypt_key: 'yQ06/Wp3fkBugAW1y2qbuQ=='
+serf::profile: 'local'
+serf::bind: "%{::ipaddress}"
+serf::discover: "%{::domain}"
+serf::event_handlers:
+ - 'user:puppet=/etc/serf/handlers/puppet'
+

@@ -1,0 +1,9 @@
+:hierarchy:
+    - "nodes/%{::hostname}"
+    - "modules/%{calling_module}"
+    - "%{environment}"
+    - common
+:backends:
+    - yaml
+:yaml:
+    :datadir: '/etc/dischord/hieradata'

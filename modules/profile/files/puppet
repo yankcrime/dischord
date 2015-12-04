@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+/usr/bin/puppet apply --modulepath /etc/dischord/modules --hiera_config=/etc/dischord/hiera.yaml --manifestdir /etc/dischord/manifests /etc/dischord/default.pp
