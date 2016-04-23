@@ -4,7 +4,15 @@ classes:
   - '::apt'
   - '::ntp'
   - '::profile::common'
-  - '::profile::serf'
+
+packages:
+  vim:
+    ensure: latest
+  htop:
+    ensure: latest
+  wget:
+    ensure: latest
+  mosh:
 
 users:
   nick:

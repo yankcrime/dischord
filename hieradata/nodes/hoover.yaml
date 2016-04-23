@@ -1,0 +1,24 @@
+---
+classes:
+  - '::profile::docker'
+
+packages:
+  neovim:
+    ensure: latest
+  libreadline-dev:
+    ensure: latest
+  weechat-dev:
+    ensure: latest
+  golang-go:
+    ensure: latest
+  python-dev:
+    ensure: latest
+  software-properties-common:
+    ensure: latest
+  silversearcher-ag:
+    ensure: latest
+  virtualbox:
+    ensure: latest
+  doge:
+    provider: pip
+

@@ -1,9 +1,11 @@
 :hierarchy:
-    - "nodes/%{::hostname}"
-    - "modules/%{calling_module}"
-    - "%{environment}"
-    - common
+  - "nodes/%{::hostname}"
+  - "modules/%{calling_module}"
+  - "%{environment}"
+  - common
 :backends:
-    - yaml
+  - yaml
 :yaml:
-    :datadir: '/etc/dischord/hieradata'
+  :datadir: '/etc/dischord/hieradata'
+:merge_behavior:
+  deeper
