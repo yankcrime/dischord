@@ -1,0 +1,12 @@
+---
+apt::sources:
+  "archive.ubuntu.com-%{::lsbdistcodename}":
+    location: 'http://archive.ubuntu.com/ubuntu'
+    key: '630239CC130E1A7FD81A27B140976EAF437D05B5'
+    repos: 'main universe multiverse restricted'
+  "fish-shell":
+    location: 'http://ppa.launchpad.net/fish-shell/nightly-master/ubuntu'
+    key: '59fda1ce1b84b3fad89366c027557f056dc33ca5'
+    repos: 'main'
+apt::purge:
+  sources.list: true

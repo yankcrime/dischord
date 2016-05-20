@@ -13,6 +13,9 @@ packages:
   wget:
     ensure: latest
   mosh:
+    ensure: latest
+  fish:
+    ensure: latest
 
 users:
   nick:

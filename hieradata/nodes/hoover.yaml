@@ -21,4 +21,9 @@ packages:
     ensure: latest
   doge:
     provider: pip
-
+  fish:
+    ensure: latest
+  nethogs:
+    ensure: latest
+  nmap:
+    ensure: latest
