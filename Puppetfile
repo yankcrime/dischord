@@ -8,3 +8,10 @@ mod 'puppetlabs/ntp',
 
 mod 'puppetlabs/apt'
 mod 'garethr/docker'
+
+mod 'jfryman/nginx'
+
+mod 'maestrodev/wget'
+
+mod 'camptocamp/puppet-systemd',
+  :git => "https://github.com/camptocamp/puppet-systemd.git"

@@ -1,0 +1,40 @@
+---
+classes:
+  - '::profile::plex'
+  - '::profile::sonarr'
+  - '::profile::nginx'
+  - '::profile::deluge'
+
+nginx::nginx_vhosts:
+  'default':
+    server_name:
+      - "%{::fqdn}"
+      - "%{::hostname}"
+      - "%{::ipaddress}"
+    www_root: '/var/www/html'
+
+packages:
+  vim:
+    ensure: latest
+  python-pip:
+    ensure: latest
+  libreadline-dev:
+    ensure: latest
+  weechat-dev:
+    ensure: latest
+  software-properties-common:
+    ensure: latest
+  silversearcher-ag:
+    ensure: latest
+  doge:
+    provider: pip
+  mono-devel:
+    ensure: latest
+  nzbdrone:
+    ensure: latest
+  deluged:
+    ensure: latest
+  deluge-web:
+    ensure: latest
+  nzbget:
+    ensure: latest

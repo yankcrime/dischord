@@ -19,6 +19,11 @@ else
   done
 fi
 
+# VMware Fusion hack
+if [ -d /etc/vmware-tools ]; then
+  echo "answer AUTO_KMODS_ENABLED yes" >> /etc/vmware-tools/locations
+fi
+
 # 260-character limit on filenames in shared folders can cause problems
 # See https://github.com/rodjek/librarian-puppet/issues/256 - plagues OS X and Windows
 # Set librarian-puppet's tmp folder to be somewhere other than a share
