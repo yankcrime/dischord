@@ -16,6 +16,8 @@ nginx::nginx_vhosts:
 packages:
   vim:
     ensure: latest
+  tmux:
+    ensure: latest
   python-pip:
     ensure: latest
   libreadline-dev:

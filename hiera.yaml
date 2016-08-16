@@ -6,6 +6,6 @@
 :backends:
   - yaml
 :yaml:
-  :datadir: '/etc/dischord/hieradata'
+  :datadir: '/etc/puppet/environments/dischord/hieradata'
 :merge_behavior:
   deeper

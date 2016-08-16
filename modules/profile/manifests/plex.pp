@@ -22,9 +22,33 @@ class profile::plex {
     require  => Wget::Fetch['plexpackage'],
   }
 
+  file { '/var/lib/plexmediaserver':
+    owner   => 'nick',
+    group   => 'nick',
+    recurse => true,
+    require => [ User['nick'], Package['plexmediaserver'] ],
+    before  => Service['plexmediaserver'],
+  }
+
   service { 'plexmediaserver':
     ensure  => 'running',
     require => Package['plexmediaserver'],
+  }
+
+  file_line { 'plex_user':
+    path    => '/lib/systemd/system/plexmediaserver.service',
+    line    => 'User=nick',
+    match   => 'User=plex',
+    require => Package['plexmediaserver'],
+    notify  => Service['plexmediaserver'],
+  }
+
+  file_line { 'plex_group':
+    path    => '/lib/systemd/system/plexmediaserver.service',
+    line    => 'Group=nick',
+    match   => 'Group=plex',
+    require => Package['plexmediaserver'],
+    notify  => Service['plexmediaserver'],
   }
 
   nginx::resource::location { 'root':
