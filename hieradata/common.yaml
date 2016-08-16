@@ -18,3 +18,5 @@ packages:
 users:
   nick:
     password: '$6$NPL/Pnap$nq67l3XdANH8HHY.z7C6CvJqTccDAE99yV2oxEx78gCdA1ofmTMIRvzfDG5FUZw80xz6eVMCoytzXO5L7Y/Ie/'
+    uid: '1026'
+    managehome: true

@@ -1,0 +1,13 @@
+[Unit]
+Description=NZBGet Daemon
+DaemonAfter=network.target
+
+[Service]
+User=nick
+ExecStart=/usr/bin/nzbget -D
+ExecStop=/usr/bin/nzbget -Q
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
