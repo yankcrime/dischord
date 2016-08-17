@@ -51,12 +51,4 @@ class profile::plex {
     notify  => Service['plexmediaserver'],
   }
 
-  nginx::resource::location { 'root':
-    vhost            => 'default',
-    location         => '/plex',
-    proxy_set_header => [ 'X-Real-IP $remote_addr', 'X-Forwarded-For $proxy_add_x_forwarded_for', 'Host $http_host' ],
-    proxy_redirect   => 'off',
-    proxy            => 'http://127.0.0.1:32400',
-  }
-
 }

@@ -29,12 +29,4 @@ class profile::deluge {
     require => Systemd::Unit_file['deluge.service'],
   }
 
-  nginx::resource::location { 'deluge':
-    vhost            => 'default',
-    location         => '/deluge',
-    proxy_set_header => [ 'X-Real-IP $remote_addr', 'X-Forwarded-For $proxy_add_x_forwarded_for' ],
-    proxy_redirect   => 'off',
-    proxy            => 'http://127.0.0.1:8112',
-  }
-
 }

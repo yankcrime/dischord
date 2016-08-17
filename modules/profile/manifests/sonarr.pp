@@ -14,12 +14,4 @@ class profile::sonarr {
     require => Systemd::Unit_file['sonarr.service'],
   }
 
-  nginx::resource::location { 'sonarr':
-    vhost            => 'default',
-    location         => '/sonarr',
-    proxy_set_header => [ 'X-Real-IP $remote_addr', 'X-Forwarded-For $proxy_add_x_forwarded_for' ],
-    proxy_redirect   => 'off',
-    proxy            => 'http://127.0.0.1:8989',
-  }
-
 }

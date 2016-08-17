@@ -4,4 +4,7 @@
 # Install and configure nginx
 
 class profile::nginx {
+
+  include ::nginx
+
 }
