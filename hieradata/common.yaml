@@ -16,12 +16,14 @@ packages:
     ensure: latest
   mosh:
     ensure: latest
+  zsh:
+    ensure: latest
+  software-properties-common:
+    ensure: latest
   unrar:
-    ensure: latest
   p7zip:
-    ensure: latest
   unzip:
-    ensure: latest
+  python-pip:
 
 users:
   nick:
@@ -37,5 +39,4 @@ sshkeys:
 sudo::purge: false
 sudo::configs:
   'nick':
-    'content': 'ALL=(ALL) NOPASSWD: ALL'
-    'priority': '10'
+    'content': 'nick  ALL=NOPASSWD: ALL'

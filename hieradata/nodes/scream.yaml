@@ -3,15 +3,11 @@ classes:
   - '::profile::docker'
 
 packages:
-  neovim:
-    ensure: latest
   libreadline-dev:
     ensure: latest
   golang-go:
     ensure: latest
   python-dev:
-    ensure: latest
-  software-properties-common:
     ensure: latest
   silversearcher-ag:
     ensure: latest
@@ -20,4 +16,26 @@ packages:
   nethogs:
     ensure: latest
   nmap:
+    ensure: latest
+  qemu-kvm:
+    ensure: latest
+  build-essential:
+    ensure: latest
+  ruby-libvirt:
+    ensure: latest
+  libvirt-bin:
+    ensure: latest
+  ebtables:
+    ensure: latest
+  dnsmasq:
+    ensure: latest
+  libxslt-dev:
+    ensure: latest
+  libxml2-dev:
+    ensure: latest
+  libvirt-dev:
+    ensure: latest
+  zlib1g-dev:
+    ensure: latest
+  ruby-dev:
     ensure: latest
