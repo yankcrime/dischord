@@ -4,6 +4,8 @@ classes:
   - '::apt'
   - '::ntp'
   - '::profile::common'
+  - '::sudo'
+  - '::sudo::configs'
 
 packages:
   vim:
@@ -31,3 +33,9 @@ sshkeys:
   nick:
     key: 'AAAAC3NzaC1lZDI1NTE5AAAAICcfkOqEi+AeoSeJcij7ltWV/1n4A5opWh6PQDyo/6vI'
     type: 'ssh-ed25519'
+
+sudo::purge: false
+sudo::configs:
+  'nick':
+    'content': 'ALL=(ALL) NOPASSWD: ALL'
+    'priority': '10'

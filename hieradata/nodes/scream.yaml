@@ -1,3 +1,23 @@
 ---
 classes:
   - '::profile::docker'
+
+packages:
+  neovim:
+    ensure: latest
+  libreadline-dev:
+    ensure: latest
+  golang-go:
+    ensure: latest
+  python-dev:
+    ensure: latest
+  software-properties-common:
+    ensure: latest
+  silversearcher-ag:
+    ensure: latest
+  doge:
+    provider: pip
+  nethogs:
+    ensure: latest
+  nmap:
+    ensure: latest
