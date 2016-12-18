@@ -9,6 +9,7 @@ class profile::common {
 
   create_resources(user, hiera('users'))
   create_resources(package, hiera('packages'))
+  create_resources(sshkey, hiera('sshkeys'))
 
   service { 'puppet':
     ensure => stopped,

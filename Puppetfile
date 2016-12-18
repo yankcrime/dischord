@@ -1,17 +1,6 @@
 forge 'https://forgeapi.puppetlabs.com'
 
-mod 'puppetlabs-stdlib',
-  :git => "https://github.com/puppetlabs/puppetlabs-stdlib.git"
-
-mod 'puppetlabs/ntp',
-  :git => "https://github.com/puppetlabs/puppetlabs-ntp.git"
-
+mod 'puppetlabs-stdlib'
+mod 'puppetlabs/ntp'
 mod 'puppetlabs/apt'
 mod 'garethr/docker'
-
-mod 'jfryman/nginx'
-
-mod 'maestrodev/wget'
-
-mod 'camptocamp/puppet-systemd',
-  :git => "https://github.com/camptocamp/puppet-systemd.git"
