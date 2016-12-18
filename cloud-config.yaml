@@ -1,0 +1,26 @@
+#cloud-config
+#
+package_upgrade: true
+
+packages:
+  - wget
+  - git
+
+runcmd:
+  - wget https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb -O /var/tmp/puppetlabs-release-pc1-xenial.deb
+  - dpkg -i /var/tmp/puppetlabs-release-pc1-xenial.deb
+  - apt-get update
+  - apt-get install --no-install-recommends -y puppet-agent
+  - systemctl disable puppet lxd
+  - /opt/puppetlabs/puppet/bin/gem install hiera-eyaml deep_merge r10k:2.2.2 --no-ri --no-rdoc
+  - git clone https://github.com/yankcrime/dischord.git /etc/dischord
+  - ln -s /etc/dischord/modules/profile /etc/puppetlabs/code/modules/
+
+manage_etc_hosts: true
+
+power_state:
+  timeout: 300 # Waits 5 minutes for cloud-init to finish all its things
+  delay: +1 # Sets 1 minute timer for reboot
+  message: Server rebooting in 1 minute.
+  mode: reboot
+
