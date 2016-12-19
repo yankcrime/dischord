@@ -6,6 +6,7 @@ classes:
   - '::profile::common'
   - '::sudo'
   - '::sudo::configs'
+  - '::sysctl::base'
 
 packages:
   vim:

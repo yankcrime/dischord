@@ -39,3 +39,7 @@ packages:
     ensure: latest
   ruby-dev:
     ensure: latest
+
+sysctl::base::values:
+  vm.swappiness:
+      value: '1'
