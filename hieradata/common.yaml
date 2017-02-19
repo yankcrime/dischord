@@ -22,9 +22,13 @@ packages:
   software-properties-common:
     ensure: latest
   unrar:
+    ensure: present
   p7zip:
+    ensure: present
   unzip:
+    ensure: present
   python-pip:
+    ensure: present
 
 users:
   nick:
