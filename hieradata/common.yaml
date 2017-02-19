@@ -34,6 +34,7 @@ users:
 
 sshkeys:
   nick:
+    user: 'nick'
     key: 'AAAAC3NzaC1lZDI1NTE5AAAAICcfkOqEi+AeoSeJcij7ltWV/1n4A5opWh6PQDyo/6vI'
     type: 'ssh-ed25519'
 
