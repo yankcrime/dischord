@@ -1,3 +1,18 @@
 ---
 classes:
   - '::profile::docker'
+  - '::profile::containers'
+
+containers:
+  nginx_proxy:
+    image: 'jwilder/nginx-proxy:alpine'
+    ports:
+      - '80'
+    volumes:
+      - '/var/run/docker.sock:/tmp/docker.sock:ro'
+  chamonixit.com:
+    image: 'chamonixit.com/webserver:f90fab0'
+    volumes:
+      - '/srv/chamonixit.com:/srv/www/chamonixit.com'
+    env:
+      'VIRTUAL_HOST=www.chamonixit.com,chamonixit.com'
