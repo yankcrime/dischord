@@ -10,11 +10,12 @@ runcmd:
   - wget https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb -O /var/tmp/puppetlabs-release-pc1-xenial.deb
   - dpkg -i /var/tmp/puppetlabs-release-pc1-xenial.deb
   - apt-get update
-  - apt-get install --no-install-recommends -y puppet-agent
+  - apt-get install --no-install-recommends -y puppet-agent librarian-puppet
   - systemctl disable puppet lxd
   - /opt/puppetlabs/puppet/bin/gem install hiera-eyaml deep_merge r10k:2.2.2 --no-ri --no-rdoc
   - git clone https://github.com/yankcrime/dischord.git /etc/dischord
-  - ln -s /etc/dischord/modules/profile /etc/puppetlabs/code/modules/
+  - cd /etc/dischord && HOME=/root librarian-puppet install
+  - /opt/puppetlabs/bin/puppet apply --environment=dischord --environmentpath=/etc --hiera_config=/etc/dischord/hiera.yaml  /etc/dischord/manifests/site.pp
 
 manage_etc_hosts: true
 
