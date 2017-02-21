@@ -17,6 +17,6 @@ containers:
     env:
       'VIRTUAL_HOST=www.chamonixit.com,chamonixit.com'
   mailhost:
-    image: 'dischord.org/mailhost:ace099d'
+    image: 'dischord.org/mailhost:6c16e2f'
     ports:
     - '25:25'
