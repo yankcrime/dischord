@@ -16,6 +16,12 @@ containers:
       - '/srv/chamonixit.com:/srv/www/chamonixit.com'
     env:
       'VIRTUAL_HOST=www.chamonixit.com,chamonixit.com'
+  openstackdays.uk:
+    image: 'openstackdays.uk/webserver:6c16e2f'
+    volumes:
+      - '/srv/openstackdays.uk:/srv/www/openstackdays.uk'
+    env:
+      'VIRTUAL_HOST=openstackdays.uk,www.openstackdays.uk'
   mailhost:
     image: 'dischord.org/mailhost:6c16e2f'
     ports:
